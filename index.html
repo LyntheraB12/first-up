@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<title>Untuk Kamu 🤍</title>
+<style>
+body{
+  margin:0;
+  height:100vh;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  background:linear-gradient(135deg,#1e1e2f,#0f0f17);
+  font-family:sans-serif;
+  text-align:center;
+  color:white;
+}
+.box{
+  background:rgba(255,255,255,0.08);
+  padding:30px;
+  border-radius:20px;
+  max-width:400px;
+}
+button{
+  padding:12px 20px;
+  border:none;
+  border-radius:12px;
+  background:#ff4d8d;
+  color:white;
+  font-size:16px;
+  cursor:pointer;
+  margin-top:15px;
+}
+.fade{
+  opacity:0;
+  transition:1s;
+}
+.show{
+  opacity:1;
+}
+</style>
+</head>
+<body>
+
+<div class="box" id="awal">
+  <h2>Hai kamu 🤍</h2>
+  <p>Aku ada sesuatu buat kamu...</p>
+  <button onclick="mulai()">Buka 💌</button>
+</div>
+
+<div class="box fade" id="isi">
+  <h2>Selamat yaa ✨</h2>
+  <p>
+  Makasih udah hadir.<br>
+  Makasih udah bertahan.<br><br>
+  Aku seneng bisa kenal kamu 🤍
+  </p>
+  <button onclick="balas()">Balas 💕</button>
+</div>
+
+<script>
+function mulai(){
+  document.getElementById("awal").style.display="none";
+  document.getElementById("isi").classList.add("show");
+}
+
+function balas(){
+  window.location.href="https://api.whatsapp.com/send?text=Makasihhh%20sayanggg%20💕";
+}
+</script>
+
+</body>
+</html>
